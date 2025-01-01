@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-typedef **float matrix;
-//Matrix type with float
-//
+struct matrix {
+    **float matrix;
+    int sizeX;
+    int sizeY;
+};
 
 *matrix createMatrix(n,m){
     int k = 1; //TODO
