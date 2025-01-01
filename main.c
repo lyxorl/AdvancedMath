@@ -1,3 +1,4 @@
 #include <stdio.h>
 
-typedef **float matrice;
+typedef **float matrix;
+//Matrix type with float
