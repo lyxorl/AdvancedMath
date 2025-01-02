@@ -72,9 +72,12 @@ matrix product(matrix A, matrix B){
 
     matrix result = createMatrix(A.sizeX,B.sizeY);
     for(int x = 0; x < A.sizeX; x++){
-        for(int y = 0; y<B.sizeY){
+        for(int y = 0; y<B.sizeY; y++){
+
             float tmp = 0.0;
-            //add loop to calculate tmp
+            for (int k = 0; k < A.sizeY; k++){
+                tmp = tmp+A.grid[k][x]*B.grid[y][k];
+            }
             result.grid[y][x] = tmp;
         } 
     }
@@ -85,7 +88,7 @@ matrix product(matrix A, matrix B){
 int determinant(matrix M){
 
     if(M.sizeX != M.sizeY){
-        print("Impossible to calculate determinant that not a square matrix : %dx%d",M.sizeY,M.sizeX);
+        printf("Impossible to calculate determinant that not a square matrix : %dx%d",M.sizeY,M.sizeX);
         exit(1);
     }
 
@@ -124,7 +127,38 @@ int main(){
     printf("\n");
     printMatrix(matrixTestTranspose);
     */
-    
+
+    /*
+    //Test product
+    matrix matrixTestProductA = createMatrix(2,3);
+    matrixTestProductA.grid[0][0] = 2.3;
+    matrixTestProductA.grid[0][1] = 7.8;
+    matrixTestProductA.grid[1][0] = 2.3;
+    matrixTestProductA.grid[2][0] = 9.0;
+    matrixTestProductA.grid[1][1] = 5.5;
+    matrixTestProductA.grid[2][1] = 1.2;
+
+    matrix matrixTestProductB = createMatrix(3,4);
+    matrixTestProductB.grid[0][0] = 1.0;
+    matrixTestProductB.grid[0][1] = 2.0;
+    matrixTestProductB.grid[0][2] = 3.0;
+    matrixTestProductB.grid[1][0] = 1.0;
+    matrixTestProductB.grid[1][1] = 1.0;
+    matrixTestProductB.grid[1][2] = 1.0;
+    matrixTestProductB.grid[2][0] = 1.0;
+    matrixTestProductB.grid[2][1] = 1.0;
+    matrixTestProductB.grid[2][2] = 1.0;
+    matrixTestProductB.grid[3][0] = 1.0;
+    matrixTestProductB.grid[3][1] = 1.0;
+    matrixTestProductB.grid[3][2] = 1.0;
+
+    matrix matrixTestResultProduct = product(matrixTestProductA,matrixTestProductB);
+    printMatrix(matrixTestProductA);
+    printf("\n");
+    printMatrix(matrixTestProductB);
+    printf("\n");
+    printMatrix(matrixTestResultProduct);
+    */
     
     return 0;
 }
