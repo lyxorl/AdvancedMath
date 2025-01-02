@@ -34,7 +34,8 @@ void zeroMatrix(matrix M){
     }
 }
 
-matrix transpose(matrix M){ //No tested and add verification to see if the matrix contain value
+matrix transpose(matrix M){ 
+    //No tested and add verification to see if the matrix contain value
     matrix result = createMatrix(M.sizeY,M.sizeX);
     for (int x = 0; x<M.sizeX; x++){
         for (int y = 0; y<M.sizeY; y++){
@@ -48,8 +49,8 @@ matrix sum(matrix A, matrix B){
 
     if(A.sizeX != B.sizeX || A.sizeY != B.sizeY){
         printf("Impossible to sum this matrix size is different :"); //Add format to align int in print of size
-        printf("Size of the first  matrix : %dx%d",A.sizeX,A.sizeY);
-        printf("Size of the second matrix : %dx%d",B.sizeX,B.sizeY);
+        printf("Size of the first  matrix : %dx%d",A.sizeY,A.sizeX);
+        printf("Size of the second matrix : %dx%d",B.sizeY,B.sizeX);
         exit(1);
     } 
 
@@ -63,6 +64,12 @@ matrix sum(matrix A, matrix B){
 }
 
 int determinant(matrix M){
+
+    if(M.sizeX != M.sizeY){
+        print("Impossible to calculate determinant that not a square matrix : %dx%d",M.sizeY,M.sizeX);
+        exit(1);
+    }
+
     return 0;//TO DO
 }
 
