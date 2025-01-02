@@ -27,7 +27,6 @@ matrix createMatrix(int n,int m){
 
 void zeroMatrix(matrix M){
     //Fill the matrix with 0
-
     for(int x = 0; x< M.sizeX; x++){
         for(int y = 0; y< M.sizeY; y++){
             M.grid[y][x] = 0.0;
@@ -45,13 +44,38 @@ matrix transpose(matrix M){ //No tested and add verification to see if the matri
     return result;
 }
 
+matrix sum(matrix A, matrix B){
+
+    if(A.sizeX != B.sizeX || A.sizeY != B.sizeY){
+        printf("Impossible to sum this matrix size is different :"); //Add format to align int in print of size
+        printf("Size of the first  matrix : %dx%d",A.sizeX,A.sizeY);
+        printf("Size of the second matrix : %dx%d",B.sizeX,B.sizeY);
+        exit(1);
+    } 
+
+    matrix result = createMatrix(A.sizeX,A.sizeY);
+    for(int x = 0; x < A.sizeX; x++){
+        for(int y = 0; y <A.sizeY; y++){
+            result.grid[y][x] = A.grid[y][x]+B.grid[y][x];
+        }
+    }
+    return result;
+}
+
+int determinant(matrix M){
+    return 0;//TO DO
+}
+
 void printMatrix(matrix M){
     // add parametter to format print with float
+
+    printf("|");
     for (int x = 0; x<M.sizeX; x++){
         for (int y = 0; y<M.sizeY; y++){
             printf("%f ",M.grid[y][x]);
         }
-        printf("\n");
+        printf("|\n");
+        if(x < M.sizeX-1){printf("|");}
     }
 }
 
@@ -74,6 +98,7 @@ int main(){
     printf("\n");
     printMatrix(matrixTestTranspose);
     */
+    
     
     return 0;
 }
