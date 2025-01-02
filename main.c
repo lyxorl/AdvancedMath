@@ -3,8 +3,8 @@
 
 typedef struct {
     double** grid;
-    int sizeX;
-    int sizeY;
+    int sizeX; //nbLine
+    int sizeY; //nbColomn
 }matrix;
 
 matrix createMatrix(int n,int m){ 
@@ -17,7 +17,7 @@ matrix createMatrix(int n,int m){
     matrix result;
     result.sizeX = n;
     result.sizeY = m;
-    result.grid = malloc(sizeof(double)*m);
+    result.grid = malloc(sizeof(double)*m); //construction of matrix witch colomn vectors
     for (int i = 0; i<m; i++){
         result.grid[i] = malloc(sizeof(double)*n);
     }
@@ -60,6 +60,25 @@ matrix sum(matrix A, matrix B){
             result.grid[y][x] = A.grid[y][x]+B.grid[y][x];
         }
     }
+    return result;
+}
+
+matrix product(matrix A, matrix B){
+    
+    if(A.sizeY != B.sizeX){
+        printf("Impossible to product this matrix");
+        exit(1);
+    }
+
+    matrix result = createMatrix(A.sizeX,B.sizeY);
+    for(int x = 0; x < A.sizeX; x++){
+        for(int y = 0; y<B.sizeY){
+            float tmp = 0.0;
+            //add loop to calculate tmp
+            result.grid[y][x] = tmp;
+        } 
+    }
+
     return result;
 }
 
