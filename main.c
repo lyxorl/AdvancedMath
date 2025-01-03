@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct {
-    double** grid;
-    int sizeX; //nbLine
-    int sizeY; //nbColomn
-}matrix;
+#include "matrixHeader.h"
 
 matrix createMatrix(int n,int m){ 
 
@@ -128,7 +121,7 @@ int main(){
     printMatrix(matrixTestTranspose);
     */
 
-    /*
+    /* need to create a lot of test
     //Test product
     matrix matrixTestProductA = createMatrix(2,3);
     matrixTestProductA.grid[0][0] = 2.3;
