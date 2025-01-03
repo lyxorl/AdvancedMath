@@ -13,4 +13,3 @@ exec: $(OBJ)
 
 clean:
 	rm -f *.o
-	rm main.out

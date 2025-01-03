@@ -12,4 +12,9 @@ typedef struct {
 
 #endif
 
+
+//fill_matrix.c
+void constantMatrix(matrix M, double d);
 void zeroMatrix(matrix M);
+void scalarMatrix(matrix M, double d);
+void identityMatrix(matrix M);

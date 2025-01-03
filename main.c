@@ -104,7 +104,7 @@ int main(){
     /*
     //Test fill 0 in matrix and transpose - OK
     matrix matrixTest = createMatrix(5,7);
-    zeroMatrix(matrixTest);
+    nullMatrix(matrixTest);
     matrixTest.grid[2][3] = 2.3;
     matrix matrixTestTranspose = transpose(matrixTest);
 
