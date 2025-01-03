@@ -12,4 +12,4 @@ exec: $(OBJ)
 	gcc $^ -o main.out
 
 clean:
-	rm -f *.o
+	rm -f *.om

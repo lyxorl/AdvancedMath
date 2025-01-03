@@ -20,7 +20,7 @@ void scalarMatrix(matrix M, double d){
         printf("Not a square matrix");
         exit(1);
     }
-
+    nullMatrix(M);
     for(int x = 0; x<M.sizeX; x++){
         M.grid[x][x] = d;
     }
