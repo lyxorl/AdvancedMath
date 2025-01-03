@@ -11,3 +11,5 @@ typedef struct {
 }matrix;
 
 #endif
+
+void zeroMatrix(matrix M);

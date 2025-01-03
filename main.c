@@ -1,5 +1,6 @@
 #include "matrixHeader.h"
 
+
 matrix createMatrix(int n,int m){ 
 
     if (n <= 0 || m <= 0){
@@ -16,15 +17,6 @@ matrix createMatrix(int n,int m){
     }
 
     return result;
-}
-
-void zeroMatrix(matrix M){
-    //Fill the matrix with 0
-    for(int x = 0; x< M.sizeX; x++){
-        for(int y = 0; y< M.sizeY; y++){
-            M.grid[y][x] = 0.0;
-        }
-    }
 }
 
 matrix transpose(matrix M){ 
@@ -106,7 +98,7 @@ int main(){
     /*---test---*/
     /*
     //Test error with matrix creation - OK
-    matrix matrixError = createMatrix(-1,5);
+    // matrix matrixError = createMatrix(-1,5);
     */
     
     /*
@@ -121,7 +113,8 @@ int main(){
     printMatrix(matrixTestTranspose);
     */
 
-    /* need to create a lot of test
+    /*
+    //need to create a lot of test
     //Test product
     matrix matrixTestProductA = createMatrix(2,3);
     matrixTestProductA.grid[0][0] = 2.3;
@@ -153,5 +146,6 @@ int main(){
     printMatrix(matrixTestResultProduct);
     */
     
+    printf("-fin-\n");
     return 0;
 }
