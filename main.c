@@ -1,16 +1,6 @@
 #include "matrixHeader.h"
 
 
-int determinant(matrix M){
-
-    if(M.sizeX != M.sizeY){
-        printf("Impossible to calculate determinant that not a square matrix : %dx%d",M.sizeY,M.sizeX);
-        exit(1);
-    }
-
-    return 0;//TO DO
-}
-
 void printMatrix(matrix M){
     // add parametter to format print with float
 

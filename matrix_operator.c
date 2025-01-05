@@ -10,3 +10,27 @@ matrix transpose(matrix M){
     }
     return result;
 }
+
+matrix removeColomn(matrix M){
+    matrix result = createMatrix(M.sizeX - 1, M.sizeY);
+    //TO DO
+    return result;
+}
+
+matrix removeLine(matrix M){
+    matrix result = createMatrix(M.sizeX, M.sizeY - 1);
+    //TO DO
+    return result;
+}
+
+int determinant(matrix M){
+
+    if(M.sizeX != M.sizeY){
+        printf("Impossible to calculate determinant that not a square matrix : %dx%d",M.sizeY,M.sizeX);
+        exit(1);
+    }
+
+    //TO DO
+
+    return 0;
+}
