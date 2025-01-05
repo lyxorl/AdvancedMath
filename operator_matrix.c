@@ -3,9 +3,9 @@
 matrix sum(matrix A, matrix B){
 
     if(A.sizeX != B.sizeX || A.sizeY != B.sizeY){
-        printf("Impossible to sum this matrix size is different :"); //Add format to align int in print of size
-        printf("Size of the first  matrix : %dx%d",A.sizeY,A.sizeX);
-        printf("Size of the second matrix : %dx%d",B.sizeY,B.sizeX);
+        printf("Impossible to sum this matrix size is different :\n"); //Add format to align int in print of size
+        printf("Size of the first  matrix : %dx%d\n",A.sizeY,A.sizeX);
+        printf("Size of the second matrix : %dx%d\n",B.sizeY,B.sizeX);
         exit(1);
     } 
 
@@ -35,6 +35,18 @@ matrix product(matrix A, matrix B){
             }
             result.grid[y][x] = tmp;
         } 
+    }
+
+    return result;
+}
+
+matrix negative(matrix M){
+    
+    matrix result = createMatrix(M.sizeX,M.sizeY);
+    for(int x = 0; x < M.sizeX; x++){
+        for(int y = 0;y < M.sizeY; y++){
+            result.grid[y][x] = M.grid[y][x]*-1.0;
+        }
     }
 
     return result;

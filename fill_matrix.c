@@ -1,31 +1,33 @@
 #include "matrixHeader.h"
 
-void constantMatrix(matrix M, double d){
+matrix constantMatrix(int n, int m, double d){
     //Fill the matrix with value d in each cases
     //Fill the matrix with 0
-    for(int x = 0; x< M.sizeX; x++){
-        for(int y = 0; y< M.sizeY; y++){
+
+    matrix result = createMatrix(int n,int m);
+
+    for(int x = 0; x< result.sizeX; x++){
+        for(int y = 0; y< result.sizeY; y++){
             M.grid[y][x] = d;
         }
     }
+    return matrix
 }
 
-void nullMatrix(matrix M){
-    constantMatrix(M, 0.0);
+matrix nullMatrix(int n, int m){
+    matrix result = constantMatrix(n, m, 0.0);
+    return result
 }
 
-void scalarMatrix(matrix M, double d){
-    //only on square matrix
-    if (M.sizeX != M.sizeY){
-        printf("Not a square matrix");
-        exit(1);
-    }
-    nullMatrix(M);
-    for(int x = 0; x<M.sizeX; x++){
+matrix scalarMatrix(int n, double d){
+    
+    matrix result = nullMatrix(n,n)
+    for(int x = 0; x<result.sizeX; x++){
         M.grid[x][x] = d;
     }
 }
 
-void identityMatrix(matrix M){
-    scalarMatrix(M, 1.0);
+matrix identityMatrix(int n){
+    matrix result = scalarMatrix(M, 1.0);
+    return result
 }

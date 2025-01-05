@@ -54,58 +54,6 @@ void printMatrix(matrix M){
 }
 
 int main(){
-    
-    /*---test---*/
-    /*
-    //Test error with matrix creation - OK
-    // matrix matrixError = createMatrix(-1,5);
-    */
-    
-    /*
-    //Test fill 0 in matrix and transpose - OK
-    matrix matrixTest = createMatrix(5,7);
-    nullMatrix(matrixTest);
-    matrixTest.grid[2][3] = 2.3;
-    matrix matrixTestTranspose = transpose(matrixTest);
 
-    printMatrix(matrixTest);
-    printf("\n");
-    printMatrix(matrixTestTranspose);
-    */
-
-    /*
-    //need to create a lot of test
-    //Test product
-    matrix matrixTestProductA = createMatrix(2,3);
-    matrixTestProductA.grid[0][0] = 2.3;
-    matrixTestProductA.grid[0][1] = 7.8;
-    matrixTestProductA.grid[1][0] = 2.3;
-    matrixTestProductA.grid[2][0] = 9.0;
-    matrixTestProductA.grid[1][1] = 5.5;
-    matrixTestProductA.grid[2][1] = 1.2;
-
-    matrix matrixTestProductB = createMatrix(3,4);
-    matrixTestProductB.grid[0][0] = 1.0;
-    matrixTestProductB.grid[0][1] = 2.0;
-    matrixTestProductB.grid[0][2] = 3.0;
-    matrixTestProductB.grid[1][0] = 1.0;
-    matrixTestProductB.grid[1][1] = 1.0;
-    matrixTestProductB.grid[1][2] = 1.0;
-    matrixTestProductB.grid[2][0] = 1.0;
-    matrixTestProductB.grid[2][1] = 1.0;
-    matrixTestProductB.grid[2][2] = 1.0;
-    matrixTestProductB.grid[3][0] = 1.0;
-    matrixTestProductB.grid[3][1] = 1.0;
-    matrixTestProductB.grid[3][2] = 1.0;
-
-    matrix matrixTestResultProduct = product(matrixTestProductA,matrixTestProductB);
-    printMatrix(matrixTestProductA);
-    printf("\n");
-    printMatrix(matrixTestProductB);
-    printf("\n");
-    printMatrix(matrixTestResultProduct);
-    */
-    
-    printf("-fin-\n");
     return 0;
 }

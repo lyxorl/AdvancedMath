@@ -15,10 +15,10 @@ typedef struct {
 matrix createMatrix(int n,int m);
 
 //fill_matrix.c
-void constantMatrix(matrix M, double d); // rewrite function with return matrix
-void zeroMatrix(matrix M);
-void scalarMatrix(matrix M, double d);
-void identityMatrix(matrix M);
+matrix constantMatrix(int n, int m, double d)
+matrix nullMatrix(int n, int m);
+matrix scalarMatrix(int n, double d);
+matrix identityMatrix(int n);
 
 //operator_matrix.c
 matrix product(matrix A, matrix B);
