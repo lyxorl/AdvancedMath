@@ -11,15 +11,45 @@ matrix transpose(matrix M){
     return result;
 }
 
-matrix removeColomn(matrix M){
+matrix removeLine(matrix M, int n){
+
+    // Add verification for n beteween 0 and M.sizeX-1
+
     matrix result = createMatrix(M.sizeX - 1, M.sizeY);
-    //TO DO
+    int selectedX = 0;
+
+    for (int x = 0; x<M.sizeX; x++){
+        if (x == n){
+            selectedX++;
+        }
+        else{
+            for (int y = 0; y<M.sizeY; y++){
+                result.grid[y][x] = M.grid[y][selectedX];
+            }
+        }
+        selectedX++;
+    }
+
     return result;
 }
 
-matrix removeLine(matrix M){
+matrix removeColomn(matrix M, int n){
+
+    // Add verification for n between 0 and M.sizeY-1
+    
     matrix result = createMatrix(M.sizeX, M.sizeY - 1);
-    //TO DO
+    int selectedY = 0;
+
+    for (int x = 0; x<M.sizeX; x++){
+        for (int y = 0; y<M.sizeY-1; y++){
+            if (y == n){
+                selectedY++;
+            }
+            result.grid[y][x] = M.grid[selectedY][x];
+            selectedY++;
+        }
+    }
+
     return result;
 }
 
@@ -30,7 +60,13 @@ int determinant(matrix M){
         exit(1);
     }
 
-    //TO DO
-
-    return 0;
+    if (M.sizeX == 1){
+        return M.grid[0][0];
+    }
+    else{
+        int det = 0;
+        for (int x = 0; x < M.sizeX;x++)
+            det = det+M.grid[0][x]*determinant(removeColomn(removeLine(M,x),0));
+        return det;
+    }
 }
