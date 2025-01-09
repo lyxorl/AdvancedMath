@@ -5,7 +5,7 @@
 #define matrixStruct
 
 typedef struct {
-    double** grid;
+    double** coefficient;
     int sizeX; //nbLine
     int sizeY; //nbColomn
 }matrix;
