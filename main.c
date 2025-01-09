@@ -1,4 +1,4 @@
-#include "matrixHeader.h"
+#include "AdvancedMath.h"
 
 
 void printMatrix(matrix M){

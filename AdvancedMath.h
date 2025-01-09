@@ -16,10 +16,20 @@ typedef struct {
 } coefMat;
 
 typedef struct {
+    Object type;
+    void *value;
+} coefPol;
+
+typedef struct {
     int sizeX; //nbLine
     int sizeY; //nbColomn
     coefMat **value;
 }matrix;
+
+typedef struct {
+    int degrees;
+    coefPol *value;
+}
 
 #endif
 
