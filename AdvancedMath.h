@@ -21,14 +21,14 @@ typedef struct {
 } coefPol;
 
 typedef struct {
-    int sizeX; //nbLine
-    int sizeY; //nbColomn
+    int x; //nbLine
+    int y; //nbColomn
     coefMat **value;
 }matrix;
 
 typedef struct {
     int degrees;
     coefPol *value;
-}
+}polynom;
 
 #endif
