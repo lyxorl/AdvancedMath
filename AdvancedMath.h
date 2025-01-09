@@ -27,7 +27,7 @@ typedef struct {
 }matrix;
 
 typedef struct {
-    int degrees;
+    int degree;
     coefPol *value;
 }polynom;
 
