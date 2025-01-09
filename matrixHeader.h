@@ -4,10 +4,21 @@
 #ifndef matrixStruct
 #define matrixStruct
 
+typedef enum {
+    COEF_FLOAT,
+    COEF_MAT,
+    COEF_POL
+} Object;
+
 typedef struct {
-    double** coefficient;
+    Object type;
+    void *value;
+} coefMat;
+
+typedef struct {
     int sizeX; //nbLine
     int sizeY; //nbColomn
+    coefMat **value;
 }matrix;
 
 #endif
