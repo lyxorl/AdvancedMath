@@ -13,12 +13,7 @@ typedef enum {
 typedef struct {
     Object type;
     void *value;
-} coefMat;
-
-typedef struct {
-    Object type;
-    void *value;
-} coefPol;
+} coefObj;
 
 typedef struct {
     int x; //nbLine

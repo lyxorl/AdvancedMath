@@ -4,7 +4,7 @@ polynom createPolynom(int d){
     polynom result;
     result.degree = d;
 
-    result.value = malloc((d+1)*sizeof(coefPol));
+    result.value = malloc((d+1)*sizeof(coefObj));
 
     return result;
 }
