@@ -1,7 +1,7 @@
 #include "AdvancedMath.h"
 
-polynom createPolynom(int d){
-    polynom result;
+polynomial createPolynom(int d){
+    polynomial result;
     result.degree = d;
 
     result.value = malloc((d+1)*sizeof(coefObj));

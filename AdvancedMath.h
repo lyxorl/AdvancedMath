@@ -18,12 +18,12 @@ typedef struct {
 typedef struct {
     int x; //nbLine
     int y; //nbColomn
-    coefMat **value;
+    coefObj **value;
 }matrix;
 
 typedef struct {
     int degree;
-    coefPol *value;
-}polynom;
+    coefObj *value;
+}polynomial;
 
 #endif
