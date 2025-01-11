@@ -24,17 +24,24 @@ typedef struct {
 typedef struct {
     int x; //nbLine
     int y; //nbColomn
+    ObjectType type; // type of coefficient : can be FLOAT COMPLEX or POLYNOMIAL
     Obj **value;
 }matrix;
 
 typedef struct {
     int degree;
+    ObjectType type; // type of coefficient : can be FLOAT or COMPLEX
     Obj *value;
 }polynomial;
 
 #endif
 
 //objetConvert.c
-
+Obj floatToObj(float d);
+float objToFloat(Obj o);
 
 //complex.c
+
+//matrix.c
+
+//polynomial.c
