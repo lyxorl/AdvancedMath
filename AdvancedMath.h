@@ -5,25 +5,36 @@
 #define matrixStruct
 
 typedef enum {
-    COEF_FLOAT,
-    COEF_MAT,
-    COEF_POL
-} Object;
+    FLOAT,
+    MAT,
+    POL,
+    COMPLEX,
+} ObjectType;
+
+typedef struct{
+    float real;
+    float imaginary;
+} complexNumber;
 
 typedef struct {
-    Object type;
+    ObjectType type;
     void *value;
-} coefObj;
+} Obj;
 
 typedef struct {
     int x; //nbLine
     int y; //nbColomn
-    coefObj **value;
+    Obj **value;
 }matrix;
 
 typedef struct {
     int degree;
-    coefObj *value;
+    Obj *value;
 }polynomial;
 
 #endif
+
+//objetConvert.c
+
+
+//complex.c
