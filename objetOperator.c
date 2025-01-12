@@ -17,6 +17,9 @@ Obj sum(Obj A, Obj B){
         case FLOAT:     result.value = malloc(sizeof(float));
                         *(float *)(result.value) = *(float *)(A.value) + *(float *)(B.value);
                         break;
+        case POL:       result.value = malloc(sizeof(polynomial));
+                        *(polynomial *)(result.value) = sumPolynomial(*(polynomial *)(A.value), *(polynomial *)(B.value));
+                        break;
         default: break;
     }
     

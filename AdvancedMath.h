@@ -47,6 +47,8 @@ Obj sum(Obj A, Obj B);
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 
 //matrix.c
+matrix createMatrix(int x, int y);
 
 //polynomial.c
 polynomial createPolynom(int d);
+polynomial sumPolynomial(polynomial A, polynomial B);
