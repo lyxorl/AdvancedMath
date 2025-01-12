@@ -13,3 +13,18 @@ matrix createMatrix(int x, int y){
 
     return result;
 }
+
+matrix sumMatrix(matrix A, matrix B){
+
+    if (A.x != B.x || A.y != B.y){
+        printf("Error impossible to sum matrix the size are not the same");
+        exit(1);
+    }
+
+    //To do
+    //make double for loop and sum coefficient with coefficient
+
+    matrix result;
+    return result;
+
+}
