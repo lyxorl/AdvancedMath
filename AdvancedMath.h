@@ -25,12 +25,14 @@ typedef struct {
     int x; //nbLine
     int y; //nbColomn
     ObjectType type; // type of coefficient : can be FLOAT COMPLEX or POLYNOMIAL
+    // /!\ no test on type care can be add later
     Obj **value;
 }matrix;
 
 typedef struct {
     int degree;
     ObjectType type; // type of coefficient : can be FLOAT or COMPLEX
+    // /!\ no test on type care can be add later
     Obj *value;
 }polynomial;
 
@@ -48,6 +50,7 @@ complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 
 //matrix.c
 matrix createMatrix(int x, int y);
+matrix sumMatrix(matrix A, matrix B);
 
 //polynomial.c
 polynomial createPolynom(int d);

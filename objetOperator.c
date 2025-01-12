@@ -20,6 +20,9 @@ Obj sum(Obj A, Obj B){
         case POL:       result.value = malloc(sizeof(polynomial));
                         *(polynomial *)(result.value) = sumPolynomial(*(polynomial *)(A.value), *(polynomial *)(B.value));
                         break;
+        case MAT:       result.value = malloc(sizeof(matrix));
+                        *(matrix *)(result.value) = sumMatrix(*(matrix*)(A.value),*(matrix*)(B.value));
+                        break;
         default: break;
     }
     
