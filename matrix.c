@@ -6,9 +6,9 @@ matrix createMatrix(int x, int y){
     result.x = x;
     result.y = y;
     result.type = FLOAT;
-    result.value = malloc(sizeof(coefObj*)*y);
+    result.value = malloc(sizeof(Obj*)*y);
     for(int i = 0; i<y; i++){
-        result.value[i] = malloc(sizeof(coefObj)*x);
+        result.value[i] = malloc(sizeof(Obj)*x);
     }
 
     return result;

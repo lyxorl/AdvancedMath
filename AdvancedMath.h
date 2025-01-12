@@ -40,8 +40,13 @@ typedef struct {
 Obj floatToObj(float d);
 float objToFloat(Obj o);
 
+//objetOperator.c
+Obj sum(Obj A, Obj B);
+
 //complex.c
+complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 
 //matrix.c
 
 //polynomial.c
+polynomial createPolynom(int d);
