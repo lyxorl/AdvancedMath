@@ -48,6 +48,7 @@ Obj sum(Obj A, Obj B);
 //complex.c
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 complexNumber productComplexNumber(complexNumber a, complexNumber b);
+complexNumber conjugateComplexNumber(complexNumber a);
 
 //matrix.c
 matrix createMatrix(int x, int y);
@@ -56,3 +57,6 @@ matrix sumMatrix(matrix A, matrix B);
 //polynomial.c
 polynomial createPolynom(int d);
 polynomial sumPolynomial(polynomial A, polynomial B);
+
+
+//add free memory function for each type in particualry for Obj
