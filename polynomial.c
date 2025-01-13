@@ -45,3 +45,13 @@ polynomial sumPolynomial(polynomial A, polynomial B){
     return result;
 
 }
+
+polynomial productPolynomial(polynomial A, polynomial B){
+
+    polynomial result;
+
+    //TO DO
+
+    return polynomial;
+
+}

@@ -28,3 +28,18 @@ Obj sum(Obj A, Obj B){
     
     return result;
 }
+
+Obj product(Obj A, Obj B){
+
+    if (A.type != B.type){
+        printf("The two object has not the same type. Impossible to product");
+        exit(1);
+    }
+
+    Obj result;
+
+    //TO DO
+
+    return result;
+
+}

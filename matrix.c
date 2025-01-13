@@ -37,3 +37,14 @@ matrix sumMatrix(matrix A, matrix B){
     return result;
 
 }
+
+polynomial productMatrix(matrix A, matrix B){
+
+    polynomial result;
+    
+    //TO DO
+
+
+    return result;
+
+}

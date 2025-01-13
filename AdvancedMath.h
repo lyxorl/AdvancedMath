@@ -47,6 +47,7 @@ Obj sum(Obj A, Obj B);
 
 //complex.c
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
+complexNumber productComplexNumber(complexNumber a, complexNumber b);
 
 //matrix.c
 matrix createMatrix(int x, int y);
