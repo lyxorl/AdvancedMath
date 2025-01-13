@@ -53,10 +53,11 @@ complexNumber conjugateComplexNumber(complexNumber a);
 //matrix.c
 matrix createMatrix(int x, int y);
 matrix sumMatrix(matrix A, matrix B);
+matrix productMatrix(matrix A, matrix B); //not done
 
 //polynomial.c
 polynomial createPolynom(int d);
 polynomial sumPolynomial(polynomial A, polynomial B);
-
+polynomial productPolynomial(polynomial A, polynomial B); //not done
 
 //add free memory function for each type in particualry for Obj

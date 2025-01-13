@@ -37,8 +37,23 @@ Obj product(Obj A, Obj B){
     }
 
     Obj result;
+    result.type = A.type;
 
-    //TO DO
+    switch(result.type){
+        case COMPLEX:   result.value = malloc(sizeof(complexNumber));
+                        *(complexNumber *)(result.value) = productComplexNumber(*(complexNumber *)(A.value), *(complexNumber *)(B.value));
+                        break;
+        case FLOAT:     result.value = malloc(sizeof(float));
+                        *(float *)(result.value) = (*(float *)(A.value))*(*(float *)(B.value));
+                        break;
+        case POL:       result.value = malloc(sizeof(matrix));
+                        *(polynomial *)(result.value) = productPolynomial(*(polynomial *)(A.value), *(polynomial *)(B.value));
+                        break;
+        case MAT:       result.value = malloc(sizeof(matrix));
+                        *(matrix *)(result.value) = productMatrix(*(matrix*)(A.value),*(matrix*)(B.value));
+                        break;
+        default: break;
+    }
 
     return result;
 
