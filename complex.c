@@ -18,3 +18,12 @@ complexNumber productComplexNumber(complexNumber a, complexNumber b){
     return result;
     
 }
+
+complexNumber conjugateComplexNumber(complexNumber a){
+    
+    complexNumber result;
+    result.real = a.real;
+    result.imaginary = (-1)*a.imaginary;
+
+    return result;
+}

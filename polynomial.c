@@ -52,6 +52,6 @@ polynomial productPolynomial(polynomial A, polynomial B){
 
     //TO DO
 
-    return polynomial;
+    return result;
 
 }
