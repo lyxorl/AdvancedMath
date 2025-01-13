@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 #ifndef matrixStruct
 #define matrixStruct
@@ -49,6 +50,7 @@ Obj sum(Obj A, Obj B);
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 complexNumber productComplexNumber(complexNumber a, complexNumber b);
 complexNumber conjugateComplexNumber(complexNumber a);
+Obj modulusComplexNumber(complexNumber a);
 
 //matrix.c
 matrix createMatrix(int x, int y);

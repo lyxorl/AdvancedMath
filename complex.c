@@ -27,3 +27,11 @@ complexNumber conjugateComplexNumber(complexNumber a){
 
     return result;
 }
+
+Obj modulusComplexNumber(complexNumber a){
+
+    Obj result;
+    result = floatToObj((sqrt(a.real*a.real+a.imaginary*a.imaginary)));
+
+    return result;
+}
