@@ -13,7 +13,7 @@ polynomial createPolynom(int d){
 polynomial sumPolynomial(polynomial A, polynomial B){
 
     if (A.type != B.type){
-        printf("Error : coeffient between A and B are different");
+        printf("Error : coeffient between A and B are not summable");
         exit(1);
     }
 
@@ -48,9 +48,22 @@ polynomial sumPolynomial(polynomial A, polynomial B){
 
 polynomial productPolynomial(polynomial A, polynomial B){
 
+    if (A.type != B.type){
+        printf("Error : coeffient between A and B are not productable");
+        exit(1);
+    }
+
     polynomial result;
 
-    //TO DO
+    result.type = A.type;
+    result.degree = A.degree+B.degree;
+
+    for (int d = 0; d <= (A.degree+B.degree); d++){
+        // Define 0 element in Obj
+        for (int dA = 0; dA <= 0 || dA <= d; d++){
+            break; // TO DO
+        }
+    }
 
     return result;
 
