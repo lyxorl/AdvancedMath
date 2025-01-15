@@ -1,5 +1,30 @@
 #include "AdvancedMath.h"
 
+Obj nullObject(ObjectType ObjT){
+    // Optional arguments for subType in polynomial and matrix and size for matrix
+
+    Obj result;
+    result.type = ObjT;
+    switch(result.type){
+        case FLOAT:     result.value = malloc(sizeof(float));
+                        *(float *)(result.value) = 0.;
+                        break;
+        case COMPLEX:   result.value = malloc(sizeof(complexNumber));
+                        *(complexNumber*)(result.value) = nullComplexNumber();
+                        break;
+        case POL:       result.value = malloc(sizeof(polynomial));
+                        *(polynomial *)(result.value) = nullPolynomial(FLOAT);//FLOAT DEFAULT VALUE
+                        break;
+        case MAT:       result.value = malloc(sizeof(matrix));
+                        *(matrix *)(result.value) = nullMatrix(1,1,FLOAT); //FLOAT 1,1 DEFAULT VALUE
+                        break;
+        default:break;
+    }
+
+    return result;
+
+}
+
 Obj sum(Obj A, Obj B){
     
     if (A.type != B.type){

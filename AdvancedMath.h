@@ -44,9 +44,11 @@ Obj floatToObj(float d);
 float objToFloat(Obj o);
 
 //objetOperator.c
+Obj nullObject(ObjectType ObjT);
 Obj sum(Obj A, Obj B);
 
 //complex.c
+complexNumber nullComplexNumber();
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 complexNumber productComplexNumber(complexNumber a, complexNumber b);
 complexNumber conjugateComplexNumber(complexNumber a);
@@ -54,11 +56,13 @@ Obj modulusComplexNumber(complexNumber a);
 
 //matrix.c
 matrix createMatrix(int x, int y);
+matrix nullMatrix(int x, int y, ObjectType ObjT);
 matrix sumMatrix(matrix A, matrix B);
 matrix productMatrix(matrix A, matrix B); //not done
 
 //polynomial.c
 polynomial createPolynom(int d);
+polynomial nullPolynomial(ObjectType ObjT);
 polynomial sumPolynomial(polynomial A, polynomial B);
 polynomial productPolynomial(polynomial A, polynomial B); //not done
 

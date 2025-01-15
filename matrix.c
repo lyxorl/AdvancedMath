@@ -14,6 +14,23 @@ matrix createMatrix(int x, int y){
     return result;
 }
 
+matrix nullMatrix(int x, int y, ObjectType ObjT){
+
+    matrix result;
+    result = createMatrix(x,y);
+    result.type = ObjT;
+    
+    for(int i = 0; i<y; i++){
+        for(int j = 0; j<y; j++){
+            Obj nullObj;
+            nullObj = nullObject(ObjT);
+            result.value[i][j] = nullObj;
+        }
+    }
+    
+    return result;
+}
+
 matrix sumMatrix(matrix A, matrix B){
 
     if (A.x != B.x || A.y != B.y){
@@ -38,12 +55,11 @@ matrix sumMatrix(matrix A, matrix B){
 
 }
 
-polynomial productMatrix(matrix A, matrix B){
+matrix productMatrix(matrix A, matrix B){
 
-    polynomial result;
+    matrix result;
     
     //TO DO
-
 
     return result;
 

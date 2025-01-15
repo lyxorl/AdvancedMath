@@ -1,5 +1,13 @@
 #include "AdvancedMath.h"
 
+complexNumber nullComplexNumber(){
+
+    complexNumber result;
+    result.real = 0;
+    result.imaginary = 0;
+    return result;
+}
+
 complexNumber sumComplexNumber(complexNumber a, complexNumber b){
     
     complexNumber result;

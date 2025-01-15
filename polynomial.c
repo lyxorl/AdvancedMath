@@ -10,6 +10,35 @@ polynomial createPolynom(int d){
     return result;
 }
 
+polynomial nullPolynomial(ObjectType ObjT){
+
+    if (ObjT != FLOAT || ObjT != COMPLEX){
+        printf("Erreur, polynomial can't have coefficient of this type");
+        exit(1);
+    }
+
+    polynomial result;
+    result = createPolynom(0);
+    result.type = ObjT;
+
+    Obj nullValue;
+
+    switch(result.type){
+        case COMPLEX:   nullValue.type = COMPLEX;
+                        nullValue.value = malloc(sizeof(complexNumber));
+                        *(complexNumber *)(nullValue.value) = nullComplexNumber();
+                        break;
+        case FLOAT:     nullValue.type = FLOAT;
+                        nullValue.value = malloc(sizeof(float));
+                        *(float *)(nullValue.value) = 0;
+                        break;
+        default: break;
+    }
+    result.value[0] = nullValue;
+
+    return result;
+}
+
 polynomial sumPolynomial(polynomial A, polynomial B){
 
     if (A.type != B.type){
@@ -59,7 +88,9 @@ polynomial productPolynomial(polynomial A, polynomial B){
     result.degree = A.degree+B.degree;
 
     for (int d = 0; d <= (A.degree+B.degree); d++){
-        // Define 0 element in Obj
+        Obj nullCoef; // Create null Obj with type in argument in objetOperator.c
+        nullCoef = nullObject(result.type);
+        result.value[d] = nullCoef;
         for (int dA = 0; dA <= 0 || dA <= d; d++){
             break; // TO DO
         }
