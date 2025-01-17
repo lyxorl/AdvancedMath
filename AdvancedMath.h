@@ -46,6 +46,7 @@ float objToFloat(Obj o);
 //objetOperator.c
 Obj nullObject(ObjectType ObjT);
 Obj sum(Obj A, Obj B);
+Obj product(Obj A, Obj B);
 
 //complex.c
 complexNumber nullComplexNumber();

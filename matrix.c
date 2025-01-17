@@ -57,9 +57,17 @@ matrix sumMatrix(matrix A, matrix B){
 
 matrix productMatrix(matrix A, matrix B){
 
+    if (matrix.y != matrix.x){
+        printf("Error the matrix don't have the good size to product them");
+        exit(1);
+    }
+    if (A.type != B.type){
+        printf("Error the two matrix don't have the same type");
+        exit(1);
+    }
+
     matrix result;
-    
-    //TO DO
+    result = createMatrix(A.x, B.y);
 
     return result;
 

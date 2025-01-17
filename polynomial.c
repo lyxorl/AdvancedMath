@@ -4,7 +4,7 @@ polynomial createPolynom(int d){
 
     polynomial result;
     result.degree = d;
-    result.type = FLOAT;
+    result.type = FLOAT; // default should have a param to select type
     result.value = malloc((d+1)*sizeof(Obj));
 
     return result;
@@ -91,8 +91,8 @@ polynomial productPolynomial(polynomial A, polynomial B){
         Obj nullCoef; // Create null Obj with type in argument in objetOperator.c
         nullCoef = nullObject(result.type);
         result.value[d] = nullCoef;
-        for (int dA = 0; dA <= 0 || dA <= d; d++){
-            break; // TO DO
+        for (int dA = 0; dA <= d; dA++){
+            result.value[d] = sum(result.value[d], product(A.value[dA],B.value[d-dA]));
         }
     }
 
