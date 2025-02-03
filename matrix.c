@@ -69,6 +69,19 @@ matrix productMatrix(matrix A, matrix B){
     matrix result;
     result = createMatrix(A.x, B.y);
 
+    for (int y = 0; y<result.y; y++){
+        for (int x = 0; x<result.x; x++){
+
+            Obj nullCoef; // Create null Obj with type in argument in objetOperator.c
+            nullCoef = nullObject(result.type);
+            result.value[y][x] = nullCoef;
+            for (int k = 0; k<A.y; k++){
+                result.value[y][x] = sum(result.value[y][x], product(A.value[k][x],B.value[y][k]));
+            }
+
+        }
+    }
+
     return result;
 
 }
