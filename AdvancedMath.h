@@ -59,12 +59,12 @@ Obj modulusComplexNumber(complexNumber a);
 matrix createMatrix(int x, int y);
 matrix nullMatrix(int x, int y, ObjectType ObjT);
 matrix sumMatrix(matrix A, matrix B);
-matrix productMatrix(matrix A, matrix B); //not done
+matrix productMatrix(matrix A, matrix B);
 
 //polynomial.c
 polynomial createPolynom(int d);
 polynomial nullPolynomial(ObjectType ObjT);
 polynomial sumPolynomial(polynomial A, polynomial B);
-polynomial productPolynomial(polynomial A, polynomial B); //not done
+polynomial productPolynomial(polynomial A, polynomial B);
 
 //add free memory function for each type in particualry for Obj

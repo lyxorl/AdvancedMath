@@ -57,7 +57,7 @@ matrix sumMatrix(matrix A, matrix B){
 
 matrix productMatrix(matrix A, matrix B){
 
-    if (matrix.y != matrix.x){
+    if (A.y != B.x){
         printf("Error the matrix don't have the good size to product them");
         exit(1);
     }
