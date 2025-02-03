@@ -99,3 +99,9 @@ polynomial productPolynomial(polynomial A, polynomial B){
     return result;
 
 }
+
+Obj evaluate(polynomial A, Obj value){
+
+    
+
+}
