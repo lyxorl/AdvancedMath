@@ -85,3 +85,7 @@ matrix productMatrix(matrix A, matrix B){
     return result;
 
 }
+
+void printMatrix(matrix M){
+    
+}

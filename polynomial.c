@@ -100,8 +100,15 @@ polynomial productPolynomial(polynomial A, polynomial B){
 
 }
 
-Obj evaluate(polynomial A, Obj value){
+Obj evaluate(polynomial P, Obj value){
 
+    Obj result;
+    result.type = value.type;
+
+    return result;
+
+}
+
+void printPolynomial(polynomial P){
     
-
 }
