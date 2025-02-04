@@ -1,4 +1,4 @@
-complex number
+complex number :
 c(a,b) with real part : a
             imaginary part b
 a and b are float
@@ -8,3 +8,17 @@ first int : degrees
 next float and int  : coefficient from degree 0 to max degree
 exemple :
 3 1 1 2 3 give this polynomial : "X^3 + 2X^2 + 1X + 1"
+
+
+matrix :
+| 1 2 3 4 |
+| 4 5 6 7 |
+| 8 9 5 1 |
+| 1 8 9 1 |
+
+define print with difference with determinant
+
+    | 1 2 3 4 |
+    | 4 5 6 7 |
+det | 8 9 5 1 | good ?
+    | 1 8 9 1 |

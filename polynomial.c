@@ -109,10 +109,14 @@ Obj evaluate(polynomial P, Obj value){
 
 }
 
-void printPolynomial(polynomial p){
+void printPolynomial(polynomial p, char indeterminate int order){
+
+    // order    1 = asc  -> 1   +  X +   X^2 .....
+    //          0 = desc -> X^n + 2X^3 + X^2 + 5X + 4
+
+    for (int d = 0; d<=p.degree; d++){
+        
+    }
     
-    // Add option for root factorisation of poissible ...
-    // order degree
-
-
+    
 }

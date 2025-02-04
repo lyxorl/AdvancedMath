@@ -3,14 +3,14 @@
 
 int main(){
 
-    //first test to print complex number
-    complexNumber test;
-    test.real = 1.2;
-    test.imaginary = 1.2;
-    printComplexNumber(test, true,1);
-    printf("\n");
-    printComplexNumber(test, false,2);
-    printf("\n");
+    // first test to print complex number
+    // complexNumber test;
+    // test.real = 1.2;
+    // test.imaginary = 1.2;
+    // printComplexNumber(test, true, 1, 0);
+    // printf("\n");
+    // printComplexNumber(test, false, 2, 0);
+    // printf("\n");
     
 
     return 0;
