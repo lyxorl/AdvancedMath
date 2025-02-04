@@ -1,5 +1,6 @@
 #include "AdvancedMath.h"
 #include <stdio.h>
+#include <stdbool.h>
 
 complexNumber nullComplexNumber(){
 
@@ -45,9 +46,24 @@ Obj modulusComplexNumber(complexNumber a){
     return result;
 }
 
-void printComplexNumber(complexNumber a){
+void printComplexNumber(complexNumber a, bool bracket, int prec, int limit_char){
 
-    //add option to limit decimal print ...
+    // prec for precision indicate number we want after comma
+    // add option to limit decimal print ...
+    // add limit max char for good formatting with other items
+    // need to make limit_char and add condition because that conatain at min 4 char with "a+ib" and car with bracket too
 
-    printf("%f + i%f", a.real, a.imaginary);
+
+    char format[10]; // contain data to print
+    snprintf(format, sizeof(format), "%%.%df", prec);
+
+    if (bracket){
+        printf("(");
+    }
+    printf(format, a.real);
+    printf("+i");
+    printf(format, a.imaginary);
+    if (bracket){
+        printf(")");
+    }
 }

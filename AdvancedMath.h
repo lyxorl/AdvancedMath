@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <math.h>
 
 #ifndef mathStruct
@@ -41,7 +42,7 @@ typedef struct {
 
 //printObject
 void printMatrix(matrix M);
-void printComplexNumber(complexNumber a);
+void printComplexNumber(complexNumber a, bool bracket,  int prec, int limit_char);
 void printPolynomial(polynomial p);
 
 //objetConvert.c
