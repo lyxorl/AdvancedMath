@@ -109,6 +109,10 @@ Obj evaluate(polynomial P, Obj value){
 
 }
 
-void printPolynomial(polynomial P){
+void printPolynomial(polynomial p){
     
+    // Add option for root factorisation of poissible ...
+    // order degree
+
+
 }

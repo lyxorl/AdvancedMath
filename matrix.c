@@ -88,4 +88,6 @@ matrix productMatrix(matrix A, matrix B){
 
 void printMatrix(matrix M){
     
+    
+
 }

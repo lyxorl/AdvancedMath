@@ -1,4 +1,5 @@
 #include "AdvancedMath.h"
+#include <stdio.h>
 
 complexNumber nullComplexNumber(){
 
@@ -42,4 +43,11 @@ Obj modulusComplexNumber(complexNumber a){
     result = floatToObj((sqrt(a.real*a.real+a.imaginary*a.imaginary)));
 
     return result;
+}
+
+void printComplexNumber(complexNumber a){
+
+    //add option to limit decimal print ...
+
+    printf("%f + i%f", a.real, a.imaginary);
 }

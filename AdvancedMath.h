@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#ifndef matrixStruct
-#define matrixStruct
+#ifndef mathStruct
+#define mathStruct
 
 typedef enum {
     FLOAT,
@@ -38,6 +38,11 @@ typedef struct {
 }polynomial;
 
 #endif
+
+//printObject
+void printMatrix(matrix M);
+void printComplexNumber(complexNumber a);
+void printPolynomial(polynomial p);
 
 //objetConvert.c
 Obj floatToObj(float d);
