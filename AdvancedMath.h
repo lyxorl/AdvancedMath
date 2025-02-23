@@ -43,7 +43,7 @@ typedef struct {
 //printObject
 void printMatrix(matrix M);
 void printComplexNumber(complexNumber a, bool bracket,  int prec, int limit_char);
-void printPolynomial(polynomial p);
+void printPolynomial(polynomial p, char indeterminate, int order);
 
 //objetConvert.c
 Obj floatToObj(float d);

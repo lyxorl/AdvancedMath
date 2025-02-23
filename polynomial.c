@@ -109,13 +109,24 @@ Obj evaluate(polynomial P, Obj value){
 
 }
 
-void printPolynomial(polynomial p, char indeterminate int order){
+void printPolynomial(polynomial p, char indeterminate, int order){
 
+    // indetrminate 'X' or 'Y' or etc
+    // if Y for example we have 5 + Y + Y^2 ...
     // order    1 = asc  -> 1   +  X +   X^2 .....
     //          0 = desc -> X^n + 2X^3 + X^2 + 5X + 4
 
     for (int d = 0; d<=p.degree; d++){
-        
+        switch(p.type){
+            case FLOAT:
+                printf("%f%c^%d", *(float *)(p.value[d].value),indeterminate,d);
+                break;
+            case COMPLEX:
+                printComplexNumber(*(complexNumber *)(p.value[d].value),true,6,1);
+            default:break;
+        }
+
+        printf(" + ");
     }
     
     
