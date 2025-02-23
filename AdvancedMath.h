@@ -42,8 +42,18 @@ typedef struct {
 
 //printObject
 void printMatrix(matrix M);
+
 void printComplexNumber(complexNumber a, bool bracket,  int prec, int limit_char);
+// a the complex number
+// bracket :    true -> (a+ib)
+//              false -> a+ib
+//prec : precision of the float
+//limit_char superior at 4 with length (a+ib) and indicate the size max of char will be print
+
 void printPolynomial(polynomial p, char indeterminate, int order);
+
+void printOject(Obj);
+
 
 //objetConvert.c
 Obj floatToObj(float d);

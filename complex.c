@@ -53,6 +53,12 @@ void printComplexNumber(complexNumber a, bool bracket, int prec, int limit_char)
     // add limit max char for good formatting with other items
     // need to make limit_char and add condition because that conatain at min 4 char with "a+ib" and car with bracket too
 
+    // Add param with priority for real or complex part with limit char
+
+    if(limit_char < 4){
+        printf("Error, not enough characters to print the complex number");
+        exit(1);
+    }
 
     char format[10]; // contain data to print
     snprintf(format, sizeof(format), "%%.%df", prec);

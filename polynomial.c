@@ -13,7 +13,7 @@ polynomial createPolynom(int d){
 polynomial nullPolynomial(ObjectType ObjT){
 
     if (ObjT != FLOAT || ObjT != COMPLEX){
-        printf("Erreur, polynomial can't have coefficient of this type");
+        printf("Error, polynomial can't have coefficient of this type");
         exit(1);
     }
 
@@ -115,6 +115,9 @@ void printPolynomial(polynomial p, char indeterminate, int order){
     // if Y for example we have 5 + Y + Y^2 ...
     // order    1 = asc  -> 1   +  X +   X^2 .....
     //          0 = desc -> X^n + 2X^3 + X^2 + 5X + 4
+
+    // Add limit of character to be print in matrix.
+    // Add ...
 
     for (int d = 0; d<=p.degree; d++){
         switch(p.type){
