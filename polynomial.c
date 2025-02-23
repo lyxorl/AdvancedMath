@@ -122,11 +122,18 @@ void printPolynomial(polynomial p, char indeterminate, int order){
     for (int d = 0; d<=p.degree; d++){
         switch(p.type){
             case FLOAT:
-                printf("%f%c^%d", *(float *)(p.value[d].value),indeterminate,d);
+                printf("%f", *(float *)(p.value[d].value));
                 break;
             case COMPLEX:
                 printComplexNumber(*(complexNumber *)(p.value[d].value),true,6,1);
             default:break;
+            if (d!=0){
+                
+                //if possible set power in unicode with real power
+                //need to check the terminal to know if that possible
+
+                printf("%c%d"indeterminate,d);
+            }
         }
 
         printf(" + ");
