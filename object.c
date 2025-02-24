@@ -46,6 +46,32 @@ Obj nullObject(ObjectType ObjT){
 
 }
 
+Obj identityObject(ObjectType ObjT){
+    // Optional arguments for subType in polynomial and matrix and size for matrix
+
+    Obj result;
+    result.type = ObjT;
+    switch(result.type){
+        case FLOAT:     result.value = malloc(sizeof(float));
+                        *(float *)(result.value) = 1.;
+                        break;
+        case COMPLEX:   result.value = malloc(sizeof(complexNumber));
+                        *(complexNumber*)(result.value) = identityComplexNumber();
+                        break;
+        case POL:       result.value = malloc(sizeof(polynomial));
+                        *(polynomial *)(result.value) = identityPolynomial(FLOAT);//FLOAT DEFAULT VALUE
+                        break;
+        case MAT:       result.value = malloc(sizeof(matrix));
+                        *(matrix *)(result.value) = indentityMatrix(1,1,FLOAT); //FLOAT 1,1 DEFAULT VALUE
+                        break;
+        default:break;
+    }
+
+    return result;
+
+}
+
+
 Obj sum(Obj A, Obj B){
     
     if (A.type != B.type){
@@ -100,6 +126,36 @@ Obj product(Obj A, Obj B){
                         break;
         default: break;
     }
+
+    return result;
+
+}
+
+Obj power(Obj O, int n){
+
+    Obj result;
+    result.type = O.type;
+
+    if (n==0){
+        switch(result.type){
+            case COMPLEX:   result.value = malloc(sizeof(complexNumber));
+                            *(complexNumber *)(result.value) = identityComplexNumber(COMPLEX);
+                            break;
+            case FLOAT:     result.value = malloc(sizeof(float));
+                            *(float *)(result.value) = 1.0;
+                            break;
+            case POL:       result.value = malloc(sizeof(polynomial));
+                            *(polynomial *)(result.value) = identityPolynomial(POL);
+                            break;
+            case MAT:       result.value = malloc(sizeof(matrix));
+                            //*(matrix *)(result.value) =;
+                            //problem to get the size of the matrix
+                            break;
+            default: break;
+        }
+    }
+
+    // ADD for n!= 0
 
     return result;
 

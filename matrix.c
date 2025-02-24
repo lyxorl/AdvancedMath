@@ -31,6 +31,23 @@ matrix nullMatrix(int x, int y, ObjectType ObjT){
     return result;
 }
 
+matrix indentityMatrix(int x, int y, ObjectType ObjT){
+
+    matrix result;
+    result = createMatrix(x,y);
+    result.type = ObjT;
+    
+    for(int i = 0; i<y; i++){
+        for(int j = 0; j<y; j++){
+            Obj identityObj;
+            identityObj = identityObject(ObjT);
+            result.value[i][j] = identityObj;
+        }
+    }
+    
+    return result;
+}
+
 matrix sumMatrix(matrix A, matrix B){
 
     if (A.x != B.x || A.y != B.y){

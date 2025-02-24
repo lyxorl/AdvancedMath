@@ -59,11 +59,15 @@ void printOject(Obj);
 Obj floatToObj(float d);
 float objToFloat(Obj o);
 Obj nullObject(ObjectType ObjT);
+Obj identityObject(ObjectType ObjT);
 Obj sum(Obj A, Obj B);
 Obj product(Obj A, Obj B);
+Obj power(Obj O, int n);
+
 
 //complex.c
 complexNumber nullComplexNumber();
+complexNumber identityComplexNumber();
 complexNumber sumComplexNumber(complexNumber a, complexNumber b);
 complexNumber productComplexNumber(complexNumber a, complexNumber b);
 complexNumber conjugateComplexNumber(complexNumber a);
@@ -72,6 +76,7 @@ Obj modulusComplexNumber(complexNumber a);
 //matrix.c
 matrix createMatrix(int x, int y);
 matrix nullMatrix(int x, int y, ObjectType ObjT);
+matrix indentityMatrix(int x, int y, ObjectType ObjT);
 matrix sumMatrix(matrix A, matrix B);
 matrix scalarMatrix(Obj lambda, matrix A);
 matrix productMatrix(matrix A, matrix B);
@@ -79,6 +84,7 @@ matrix productMatrix(matrix A, matrix B);
 //polynomial.c
 polynomial createPolynom(int d);
 polynomial nullPolynomial(ObjectType ObjT);
+polynomial identityPolynomial(ObjectType ObjT);
 polynomial sumPolynomial(polynomial A, polynomial B);
 polynomial scalarPolynomial(Obj lambda, polynomial P);
 polynomial productPolynomial(polynomial A, polynomial B);

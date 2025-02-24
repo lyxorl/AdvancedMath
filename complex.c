@@ -10,6 +10,15 @@ complexNumber nullComplexNumber(){
     return result;
 }
 
+complexNumber identityComplexNumber(){
+
+    complexNumber result;
+    result.real = 1;
+    result.imaginary = 0;
+    return result;
+
+}
+
 complexNumber sumComplexNumber(complexNumber a, complexNumber b){
     
     complexNumber result;

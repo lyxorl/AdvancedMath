@@ -39,6 +39,34 @@ polynomial nullPolynomial(ObjectType ObjT){
     return result;
 }
 
+polynomial identityPolynomial(ObjectType ObjT){
+    if (ObjT != FLOAT || ObjT != COMPLEX){
+        printf("Error, polynomial can't have coefficient of this type");
+        exit(1);
+    }
+
+    polynomial result;
+    result = createPolynom(0);
+    result.type = ObjT;
+
+    Obj nullValue;
+
+    switch(result.type){
+        case COMPLEX:   nullValue.type = COMPLEX;
+                        nullValue.value = malloc(sizeof(complexNumber));
+                        *(complexNumber *)(nullValue.value) = identityComplexNumber();
+                        break;
+        case FLOAT:     nullValue.type = FLOAT;
+                        nullValue.value = malloc(sizeof(float));
+                        *(float *)(nullValue.value) = 1;
+                        break;
+        default: break;
+    }
+    result.value[0] = nullValue;
+
+    return result;
+}
+
 polynomial sumPolynomial(polynomial A, polynomial B){
 
     if (A.type != B.type){
