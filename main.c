@@ -13,7 +13,7 @@ int main(){
     // printf("\n");
     // Check
 
-    //first test polynomial
+    //first test polynomial print
     //polynomial polytest;
     //polytest = createPolynom(1);
     //Obj coeff0;

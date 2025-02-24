@@ -105,8 +105,16 @@ Obj product(Obj A, Obj B){
 
 }
 
-void printOject(Obj){
+void printOject(Obj O){
 
-    
+    //work on argument for print
+
+    switch(O.type){
+        case FLOAT:     break;
+        case COMPLEX:   break;
+        case POL:       break;
+        case MAT:       break;
+        default:break;
+    }
 
 }

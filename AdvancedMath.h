@@ -55,11 +55,9 @@ void printPolynomial(polynomial p, char indeterminate, int order);
 void printOject(Obj);
 
 
-//objetConvert.c
+//object.c
 Obj floatToObj(float d);
 float objToFloat(Obj o);
-
-//objetOperator.c
 Obj nullObject(ObjectType ObjT);
 Obj sum(Obj A, Obj B);
 Obj product(Obj A, Obj B);
@@ -82,6 +80,7 @@ matrix productMatrix(matrix A, matrix B);
 polynomial createPolynom(int d);
 polynomial nullPolynomial(ObjectType ObjT);
 polynomial sumPolynomial(polynomial A, polynomial B);
+polynomial scalarPolynomial(Obj lambda, polynomial P);
 polynomial productPolynomial(polynomial A, polynomial B);
 
 //add free memory function for each type in particualry for Obj
