@@ -55,6 +55,29 @@ matrix sumMatrix(matrix A, matrix B){
 
 }
 
+matrix scalarMatrix(Obj lambda, matrix A){
+
+    if (lambda.type == MAT){
+        printf("Error : lambda is not a scalar is a Matrix");
+        exit(1);
+    }
+    if (lambda.type != A.type){
+        printf("Error : scalar has not the same type as the coefficient of the matrix");
+        exit(1);
+    }
+
+    matrix result;
+    result = createMatrix(A.x,A.y);
+
+    for(int y = 0; y<result.y; y++){
+        for(int x = 0; x<result.x; x++){
+            result.value[y][x] = product(lambda, A.value[y][x]);
+        }
+    }
+
+    return result;
+}
+
 matrix productMatrix(matrix A, matrix B){
 
     if (A.y != B.x){
@@ -88,7 +111,6 @@ matrix productMatrix(matrix A, matrix B){
 
 void printMatrix(matrix M){
     
-    
-    
+    // TO DO
 
 }

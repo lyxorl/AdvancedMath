@@ -75,6 +75,7 @@ Obj modulusComplexNumber(complexNumber a);
 matrix createMatrix(int x, int y);
 matrix nullMatrix(int x, int y, ObjectType ObjT);
 matrix sumMatrix(matrix A, matrix B);
+matrix scalarMatrix(Obj lambda, matrix A);
 matrix productMatrix(matrix A, matrix B);
 
 //polynomial.c

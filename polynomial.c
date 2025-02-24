@@ -75,6 +75,29 @@ polynomial sumPolynomial(polynomial A, polynomial B){
 
 }
 
+polynomial scalarPolynomial(Obj lambda, polynomial P){
+
+    if (lambda.type == MAT || lambda.type == POL){
+        printf("Error : non good type scalar");
+        exit(1);
+    }
+    if (lambda.type != P.type){
+        printf("Error : scalar has not the type as the coefficient of the polynomial");
+        exit(1);
+    }
+
+    polynomial result;
+    result.type = P.type;
+    result.degree = P.degree;
+
+    for (int d = 0; d<= P.degree; d++){
+        result.value[d] = product(lambda, P.value[d]);
+    }
+
+    return result;
+
+}
+
 polynomial productPolynomial(polynomial A, polynomial B){
 
     if (A.type != B.type){
@@ -132,7 +155,7 @@ void printPolynomial(polynomial p, char indeterminate, int order){
                 //if possible set power in unicode with real power
                 //need to check the terminal to know if that possible
 
-                printf("%c%d"indeterminate,d);
+                printf("%c%d",indeterminate,d);
             }
         }
 

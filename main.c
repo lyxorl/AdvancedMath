@@ -11,6 +11,7 @@ int main(){
     // printf("\n");
     // printComplexNumber(test, false, 2, 0);
     // printf("\n");
+    // Check
 
     //first test polynomial
     //polynomial polytest;
